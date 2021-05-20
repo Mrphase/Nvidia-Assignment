@@ -6,7 +6,8 @@
 <h3 id="gunrock-gpu-graph-analytics" align="center">谢泽辉</h3>
 <!-- end: gunrock's header -->
 
-**题干：** The provided file contains a simple kernel and full code to measure its performance, please optimize this kernel to maximize its performance. The data dimensions are to remain the same, ie. you can assume that they will not change during our testing and that it is acceptable for your optimizations to rely upon them. You can change the kernel itself in any way you like, naturally the mathematical operation for each output element mustbe the same.
+**题干：** The provided file contains a simple kernel and full code to measure its performance, please optimize this kernel to maximize its performance. The data dimensions are to remain the same, ie. you can assume that they will not change during our testing and that it is acceptable for your optimizations to rely upon them. You can change the kernel itself in any way you like, naturally the mathematical operation for each output element must
+be the same.
 You can also change the kernel launch configuration in any way you like, i.e. you can select the grid and block dimensions as you see fit. However, do not modify the for-loop that launches the kernel 'nreps' times (line 40) since this loop is simply there to average the elapsed time over several launches.
 Please provide a brief summary of the optimizations you apply, a sentence or two for each optimization is sufficient.
 
