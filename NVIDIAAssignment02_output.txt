@@ -1,0 +1,52 @@
+
+===========================test============================
+Zehui Xie
+ rowDimA: 5  colDimA: 10  colDimB: 8
+
+Matrix A Values:
+1  1  1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1  1  1
+
+
+Matrix B Values:
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+
+Matrix C From Device
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+
+Matrix C From Host
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+10  10  10  10  10  10  10  10
+
+===========================matrixMul============================
+Zehui Xie
+ rowDimA: 512  colDimA: 1024  colDimB: 640
+Time elapsed on matrix multiplication of 512x1024 . 1024x640 on GPU without shared memory: 2.496394 ms.
+
+res correct!
+Performance= 268.82 GFlop/s, Time= 2.496 msec, Size= 671088640
+
+===========================matrixMul_SharedMemory============================
+Time elapsed on matrix multiplication of 512x1024 . 1024x640 on GPU with shared memory: 1.670998 ms.
+
+res correct!
+Performance= 401.61 GFlop/s, Time= 1.671 msec, Size= 671088640

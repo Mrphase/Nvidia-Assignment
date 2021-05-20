@@ -1,0 +1,42 @@
+allocated 16.00 MB on GPU
+allocated 16.00 MB on CPU
+
+input: print_list:
+ 51 45 200 142 235 118 224 184 92 154 ...
+
+===========================kernel_A (origional)============================
+print_list:
+ 53.4068 67.3596 204.203 166.555 235.619 142.202 229.336 209.047 97.3885 178.709 ...
+ A:      1.12 ms
+CUDA: no error
+
+===========================kernel__Divergence1_Occopuancy============================
+print_list:
+ 53.4068 67.3596 204.203 166.555 235.619 142.202 229.336 209.047 97.3885 178.709 ...
+ kernel__Divergence1_Occopuancy:      0.23 ms
+CUDA: no error
+res correct
+
+===========================kernel__Divergence2============================
+print_list:
+ 53.4068 67.3596 204.203 166.555 235.619 142.202 229.336 209.047 97.3885 178.709 ...
+ kernel__Divergence2:      0.24 ms
+CUDA: no error
+res correct
+
+===========================kernel__Table============================
+===h_data[i] = 10.f + rand() % 256;, range from 10-265 unique values===========
+===Since timing_experiment() function modify restult 10 times,
+But our table is static, this mehtod may not output exact same value after call timing_experiment()===
+print_list:
+ 53.2859 65.2678 204.144 162.465 235.431 138.432 229.237 209.516 97.2736 174.479 ...
+ kernel__Table:      0.24 ms
+CUDA: no error
+
+===========================kernel_kernel__device_copy_vector2 Vectorized Memory Access============================
+print_list:
+ 53.4068 67.3596 204.203 166.555 235.619 142.202 229.336 209.047 97.3885 178.709 ...
+ kernel__device_copy_vector2:      0.12 ms
+CUDA: no error
+res correct
+
